@@ -1,0 +1,14 @@
+# Project language
+language: node_js
+
+node_js:
+  - 8
+
+# Cache node_modules so install is faster
+cache:
+  directories:
+    - node_modules
+
+# Run script
+script:
+  - make tests

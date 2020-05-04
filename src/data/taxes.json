@@ -1,0 +1,10 @@
+[
+    {
+        "label": "Charges Patronales",
+        "tax_rate": 42
+    },
+    {
+        "label": "TVA (20%)",
+        "tax_rate": 20
+    }
+]
