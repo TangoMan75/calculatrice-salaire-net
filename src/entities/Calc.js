@@ -24,6 +24,12 @@ export default class Calc {
     salary = {};
 
     /**
+     * Taxes
+     * @type {Object}
+     */
+    taxes = {};
+
+    /**
      * Status
      * @type {Object}
      */
@@ -47,11 +53,13 @@ export default class Calc {
      * @param  {Object}  hours   Base Hours
      * @param  {Object}  salary  Salary
      * @param  {Object}  status  Employee Status
+     * @param  {Object}  taxes   Employee Taxes
      */
-    constructor(hours, salary, status) {
+    constructor(hours, salary, status, taxes) {
         this.hours = hours;
         this.salary = salary;
         this.status = status;
+        this.taxes = taxes;
         this.tax_rate = Number(status.tax_rate)
     }
 
