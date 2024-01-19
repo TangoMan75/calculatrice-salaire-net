@@ -1,0 +1,26 @@
+[
+    {
+        "label": "Salarié non-cadre",
+        "tax_rate": 22
+    },
+    {
+        "label": "Salarié cadre",
+        "tax_rate": 25
+    },
+    {
+        "label": "Fonction publique",
+        "tax_rate": 15
+    },
+    {
+        "label": "Profession libérale",
+        "tax_rate": 45
+    },
+    {
+        "label": "Portage salarial",
+        "tax_rate": 51
+    },
+    {
+        "label": "Micro-entrepreneur",
+        "tax_rate": 22
+    }
+]
