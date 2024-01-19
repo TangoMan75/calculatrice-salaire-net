@@ -73,6 +73,7 @@
                         <th scope="col">Salaire</th>
                         <th scope="col">Brut</th>
                         <th scope="col">Net</th>
+                        <th scope="col">Cotisations</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -94,6 +95,9 @@
                                    @change="update_annual_net" @keyup="update_annual_net"
                                    @keyup.enter="blur('annual_net')" @blur="toggle('annual_net')"/>
                         </td>
+                        <td>
+                            <p id="annual_tax">{{ calc.salary.annual_tax | format_euro }}</p>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Mensuel</th>
@@ -112,6 +116,9 @@
                                    class="form-control form-control-sm" v-model="calc.salary.monthly_net"
                                    @change="update_monthly_net" @keyup="update_monthly_net"
                                    @keyup.enter="blur('monthly_net')" @blur="toggle('monthly_net')"/>
+                        </td>
+                        <td>
+                            <p id="monthly_tax">{{ calc.salary.monthly_tax | format_euro }}</p>
                         </td>
                     </tr>
                     <tr>
@@ -132,6 +139,9 @@
                                    @change="update_daily_net" @keyup="update_daily_net" @keyup.enter="blur('daily_net')"
                                    @blur="toggle('daily_net')"/>
                         </td>
+                        <td>
+                            <p id="daily_tax">{{ calc.salary.daily_tax | format_euro }}</p>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Horaire</th>
@@ -150,6 +160,9 @@
                                    class="form-control form-control-sm" v-model="calc.salary.hourly_net"
                                    @change="update_hourly_net" @keyup="update_hourly_net"
                                    @keyup.enter="blur('hourly_net')" @blur="toggle('hourly_net')"/>
+                        </td>
+                        <td>
+                            <p id="hourly_tax">{{ calc.salary.hourly_tax | format_euro }}</p>
                         </td>
                     </tr>
                     </tbody>
@@ -419,6 +432,12 @@
                     min-width: 6rem;
                     max-width: 6rem;
                     padding: 0;
+
+                    p {
+                        display: block;
+                        margin: 0;
+                        padding: 12px;
+                    }
 
                     label {
                         display: block;
