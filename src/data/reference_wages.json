@@ -1,0 +1,264 @@
+[
+    {
+        "year": 2024,
+        "label": "SMIC 2024",
+        "hourly_gross": 11.65
+    },
+    {
+        "year": 2023,
+        "label": "SMIC 2023",
+        "hourly_gross": 11.27
+    },
+    {
+        "year": 2022,
+        "label": "SMIC 2022",
+        "hourly_gross": 11.07
+    },
+    {
+        "year": 2022,
+        "label": "SMIC 2022",
+        "hourly_gross": 10.57
+    },
+    {
+        "year": 2021,
+        "label": "SMIC 2021",
+        "hourly_gross": 10.25
+    },
+    {
+        "year": 2020,
+        "label": "SMIC 2020",
+        "hourly_gross": 10.15
+    },
+    {
+        "year": 2019,
+        "label": "SMIC 2019",
+        "hourly_gross": 10.03
+    },
+    {
+        "year": 2018,
+        "label": "SMIC 2018",
+        "hourly_gross": 9.88
+    },
+    {
+        "year": 2017,
+        "label": "SMIC 2017",
+        "hourly_gross": 9.76
+    },
+    {
+        "year": 2016,
+        "label": "SMIC 2016",
+        "hourly_gross": 9.67
+    },
+    {
+        "year": 2015,
+        "label": "SMIC 2015",
+        "hourly_gross": 9.61
+    },
+    {
+        "year": 2014,
+        "label": "SMIC 2014",
+        "hourly_gross": 9.53
+    },
+    {
+        "year": 2013,
+        "label": "SMIC 2013",
+        "hourly_gross": 9.43
+    },
+    {
+        "year": 2012,
+        "label": "SMIC 2012",
+        "hourly_gross": 9.4
+    },
+    {
+        "year": 2011,
+        "label": "SMIC 2011",
+        "hourly_gross": 9.19
+    },
+    {
+        "year": 2010,
+        "label": "SMIC 2010",
+        "hourly_gross": 8.86
+    },
+    {
+        "year": 2009,
+        "label": "SMIC 2009",
+        "hourly_gross": 8.82
+    },
+    {
+        "year": 2008,
+        "label": "SMIC 2008",
+        "hourly_gross": 8.71
+    },
+    {
+        "year": 2007,
+        "label": "SMIC 2007",
+        "hourly_gross": 8.44
+    },
+    {
+        "year": 2006,
+        "label": "SMIC 2006",
+        "hourly_gross": 8.27
+    },
+    {
+        "year": 2005,
+        "label": "SMIC 2005",
+        "hourly_gross": 8.03
+    },
+    {
+        "year": 2004,
+        "label": "SMIC 2004",
+        "hourly_gross": 7.61
+    },
+    {
+        "year": 2003,
+        "label": "SMIC 2003",
+        "hourly_gross": 7.19
+    },
+    {
+        "year": 2015,
+        "label": "Salaire Moyen 2015",
+        "source": "JDN",
+        "annual_net": 26634,
+        "hourly_gross": 18.76
+    },
+    {
+        "year": 2014,
+        "label": "Salaire Moyen 2014",
+        "source": "JDN",
+        "annual_net": 26327,
+        "hourly_gross": 18.55
+    },
+    {
+        "year": 2013,
+        "label": "Salaire Moyen 2013",
+        "source": "JDN",
+        "annual_net": 26059,
+        "hourly_gross": 18.36
+    },
+    {
+        "year": 2012,
+        "label": "Salaire Moyen 2012",
+        "source": "JDN",
+        "annual_net": 25507,
+        "hourly_gross": 17.97
+    },
+    {
+        "year": 2011,
+        "label": "Salaire Moyen 2011",
+        "source": "JDN",
+        "annual_net": 25126,
+        "hourly_gross": 17.7
+    },
+    {
+        "year": 2010,
+        "label": "Salaire Moyen 2010",
+        "source": "JDN",
+        "annual_net": 24518,
+        "hourly_gross": 17.27
+    },
+    {
+        "year": 2009,
+        "label": "Salaire Moyen 2009",
+        "source": "JDN",
+        "annual_net": 24033,
+        "hourly_gross": 16.93
+    },
+    {
+        "year": 2008,
+        "label": "Salaire Moyen 2008",
+        "source": "JDN",
+        "annual_net": 23718,
+        "hourly_gross": 16.71
+    },
+    {
+        "year": 2007,
+        "label": "Salaire Moyen 2007",
+        "source": "JDN",
+        "annual_net": 23009,
+        "hourly_gross": 16.21
+    },
+    {
+        "year": 2006,
+        "label": "Salaire Moyen 2006",
+        "source": "JDN",
+        "annual_net": 22302,
+        "hourly_gross": 15.71
+    },
+    {
+        "year": 2005,
+        "label": "Salaire Moyen 2005",
+        "source": "JDN",
+        "annual_net": 21900,
+        "hourly_gross": 15.43
+    },
+    {
+        "year": 2004,
+        "label": "Salaire Moyen 2004",
+        "source": "JDN",
+        "annual_net": 21293,
+        "hourly_gross": 15
+    },
+    {
+        "year": 2003,
+        "label": "Salaire Moyen 2003",
+        "source": "JDN",
+        "annual_net": 20822,
+        "hourly_gross": 14.67
+    },
+    {
+        "year": 2002,
+        "label": "Salaire Moyen 2002",
+        "source": "JDN",
+        "annual_net": 20392,
+        "hourly_gross": 14.36
+    },
+    {
+        "year": 2001,
+        "label": "Salaire Moyen 2001",
+        "source": "JDN",
+        "annual_net": 19970,
+        "hourly_gross": 14.07
+    },
+    {
+        "year": 2000,
+        "label": "Salaire Moyen 2000",
+        "source": "JDN",
+        "annual_net": 19516,
+        "hourly_gross": 13.75
+    },
+    {
+        "year": 1999,
+        "label": "Salaire Moyen 1999",
+        "source": "JDN",
+        "annual_net": 19115,
+        "hourly_gross": 13.47
+    },
+    {
+        "year": 1998,
+        "label": "Salaire Moyen 1998",
+        "source": "JDN",
+        "annual_net": 18726,
+        "hourly_gross": 13.19
+    },
+    {
+        "year": 1997,
+        "label": "Salaire Moyen 1997",
+        "source": "JDN",
+        "annual_net": 18439,
+        "hourly_gross": 12.99
+    },
+    {
+        "year": 1996,
+        "label": "Salaire Moyen 1996",
+        "source": "JDN",
+        "annual_net": 18109,
+        "hourly_gross": 12.76
+    },
+    {
+        "year": 1995,
+        "label": "Salaire Moyen 1995",
+        "source": "JDN",
+        "annual_net": 17928,
+        "hourly_gross": 10.03
+    }
+]
