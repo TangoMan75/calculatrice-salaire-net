@@ -1,5 +1,15 @@
 [
     {
+        "year": 2026,
+        "label": "SMIC 2026",
+        "hourly_gross": 12.02
+    },
+    {
+        "year": 2025,
+        "label": "SMIC 2025",
+        "hourly_gross": 11.88
+    },
+    {
         "year": 2024,
         "label": "SMIC 2024",
         "hourly_gross": 11.65

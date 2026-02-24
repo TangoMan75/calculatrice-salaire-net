@@ -18,8 +18,8 @@ import Footer from '@/components/Footer.vue'
 describe('Footer.vue', () => {
 
     it('renders props.version and props.copyright when passed', () => {
-        const copyrights = '2024 Matthias Morin';
-        const version = '1.0.0';
+        const copyrights = '2026 Matthias Morin';
+        const version = '1.0.1';
         const wrapper = shallowMount(Footer, {
             propsData: { version, copyrights }
         });

@@ -281,7 +281,7 @@ Si vous souhaitez ouvrir un rapport de bug, veuillez d'abord vérifier qu'il n'a
 📜 License
 ----------
 
-Copyrights (c) 2024 &quot;Matthias Morin&quot; &lt;mat@tangoman.io&gt;
+Copyrights (c) 2026 &quot;Matthias Morin&quot; &lt;mat@tangoman.io&gt;
 
 [![License](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE)
 Distribué sous la licence MIT.

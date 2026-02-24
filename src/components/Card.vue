@@ -217,7 +217,7 @@
             <button class="btn btn-outline-success btn-sm float-right" v-if="updateExists" @click="refreshApp">Mise à
                 jour
             </button>
-            <p class="small"><span class="badge badge-success mr-2">v1.0.0</span> Copyright &copy; Matthias Morin 2024
+            <p class="small"><span class="badge badge-success mr-2">v1.0.0</span> Copyright &copy; Matthias Morin 2026
             </p>
         </div><!-- end card footer -->
     </div><!-- end card -->
