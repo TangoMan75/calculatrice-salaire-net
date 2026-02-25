@@ -10,7 +10,7 @@
     <!-- card -->
     <div class="card">
         <div class="card-header d-none d-sm-block">
-            <h3><img src="../assets/logo.png" width="40" height="40" alt="" class="mr-3">Calculatrice Salaire Net</h3>
+            <h3><img src="/favicon/dollar_banknote.svg" width="40" height="40" alt="" class="mr-3">Calculatrice Salaire Net</h3>
         </div>
         <div class="card-body">
             <div class="callout callout-success">
@@ -80,7 +80,7 @@
                         <th scope="row">Annuel</th>
                         <td>
                             <label for="annual_gross" @click="toggle('annual_gross')"
-                                   :class="{ 'd-none': !edit.annual_gross }"><span class="editable">{{ calc.salary.annual_gross | format_euro }}</span></label>
+                                   :class="{ 'd-none': !edit.annual_gross }"><span class="editable">{{ formatEuro(calc.salary.annual_gross) }}</span></label>
                             <input id="annual_gross" type="number" :class="{ 'd-none': edit.annual_gross }"
                                    class="form-control form-control-sm" v-model="calc.salary.annual_gross"
                                    @change="update_annual_gross" @keyup="update_annual_gross"
@@ -88,7 +88,7 @@
                         </td>
                         <td>
                             <label for="annual_net" @click="toggle('annual_net')"
-                                   :class="{ 'd-none': !edit.annual_net }"><span class="editable">{{ calc.salary.annual_net | format_euro }}</span></label>
+                                   :class="{ 'd-none': !edit.annual_net }"><span class="editable">{{ formatEuro(calc.salary.annual_net) }}</span></label>
                             <input id="annual_net" type="number" :class="{ 'd-none': edit.annual_net }"
                                    class="form-control form-control-sm" v-model="calc.salary.annual_net"
                                    @change="update_annual_net" @keyup="update_annual_net"
@@ -99,7 +99,7 @@
                         <th scope="row">Mensuel</th>
                         <td>
                             <label for="monthly_gross" @click="toggle('monthly_gross')"
-                                   :class="{ 'd-none': !edit.monthly_gross }"><span class="editable">{{ calc.salary.monthly_gross | format_euro }}</span></label>
+                                   :class="{ 'd-none': !edit.monthly_gross }"><span class="editable">{{ formatEuro(calc.salary.monthly_gross) }}</span></label>
                             <input id="monthly_gross" type="number" :class="{ 'd-none': edit.monthly_gross }"
                                    class="form-control form-control-sm" v-model="calc.salary.monthly_gross"
                                    @change="update_monthly_gross" @keyup="update_monthly_gross"
@@ -107,7 +107,7 @@
                         </td>
                         <td>
                             <label for="monthly_net" @click="toggle('monthly_net')"
-                                   :class="{ 'd-none': !edit.monthly_net }"><span class="editable">{{ calc.salary.monthly_net | format_euro }}</span></label>
+                                   :class="{ 'd-none': !edit.monthly_net }"><span class="editable">{{ formatEuro(calc.salary.monthly_net) }}</span></label>
                             <input id="monthly_net" type="number" :class="{ 'd-none': edit.monthly_net }"
                                    class="form-control form-control-sm" v-model="calc.salary.monthly_net"
                                    @change="update_monthly_net" @keyup="update_monthly_net"
@@ -118,7 +118,7 @@
                         <th scope="row">Journalier</th>
                         <td>
                             <label for="daily_gross" @click="toggle('daily_gross')"
-                                   :class="{ 'd-none': !edit.daily_gross }"><span class="editable">{{ calc.salary.daily_gross | format_euro }}</span></label>
+                                   :class="{ 'd-none': !edit.daily_gross }"><span class="editable">{{ formatEuro(calc.salary.daily_gross) }}</span></label>
                             <input id="daily_gross" type="number" :class="{ 'd-none': edit.daily_gross }"
                                    class="form-control form-control-sm" v-model="calc.salary.daily_gross"
                                    @change="update_daily_gross" @keyup="update_daily_gross"
@@ -126,7 +126,7 @@
                         </td>
                         <td>
                             <label for="daily_net" @click="toggle('daily_net')"
-                                   :class="{ 'd-none': !edit.daily_net }"><span class="editable">{{ calc.salary.daily_net | format_euro }}</span></label>
+                                   :class="{ 'd-none': !edit.daily_net }"><span class="editable">{{ formatEuro(calc.salary.daily_net) }}</span></label>
                             <input id="daily_net" type="number" :class="{ 'd-none': edit.daily_net }"
                                    class="form-control form-control-sm" v-model="calc.salary.daily_net"
                                    @change="update_daily_net" @keyup="update_daily_net" @keyup.enter="blur('daily_net')"
@@ -137,7 +137,7 @@
                         <th scope="row">Horaire</th>
                         <td>
                             <label for="hourly_gross" @click="toggle('hourly_gross')"
-                                   :class="{ 'd-none': !edit.hourly_gross }"><span class="editable">{{ calc.salary.hourly_gross | format_euro }}</span></label>
+                                   :class="{ 'd-none': !edit.hourly_gross }"><span class="editable">{{ formatEuro(calc.salary.hourly_gross) }}</span></label>
                             <input id="hourly_gross" type="number" :class="{ 'd-none': edit.hourly_gross }"
                                    class="form-control form-control-sm" v-model="calc.salary.hourly_gross"
                                    @change="update_hourly_gross" @keyup="update_hourly_gross"
@@ -145,7 +145,7 @@
                         </td>
                         <td>
                             <label for="hourly_net" @click="toggle('hourly_net')"
-                                   :class="{ 'd-none': !edit.hourly_net }"><span class="editable">{{ calc.salary.hourly_net | format_euro }}</span></label>
+                                   :class="{ 'd-none': !edit.hourly_net }"><span class="editable">{{ formatEuro(calc.salary.hourly_net) }}</span></label>
                             <input id="hourly_net" type="number" :class="{ 'd-none': edit.hourly_net }"
                                    class="form-control form-control-sm" v-model="calc.salary.hourly_net"
                                    @change="update_hourly_net" @keyup="update_hourly_net"
@@ -159,7 +159,7 @@
                         <span class="mb-2 mb-sm-2 ml-2 small text-muted">
                             Charges patronales / an
                         </span>
-                        <span class="mb-2 mb-sm-2 ml-2 badge badge-secondary">{{ calc.salary.employer_contributions | format_euro }}</span>
+                        <span class="mb-2 mb-sm-2 ml-2 badge badge-secondary">{{ formatEuro(calc.salary.employer_contributions) }}</span>
                     </div>
                     <div class="col-xs-12 col-md-6 text-right">
                         <span class="mb-2 mb-sm-2 ml-2 small text-muted">
@@ -168,9 +168,7 @@
                         <span class="editable-badge">
                             <label for="total_cost" @click="toggle('total_cost')"
                                    :class="{ 'd-none': !edit.total_cost }"
-                                   class="mb-2 mb-sm-2 ml-2 badge badge-secondary">{{ (calc.salary.total_cost) |
-                                format_euro
-                                }}</label>
+                                    class="mb-2 mb-sm-2 ml-2 badge badge-secondary">{{ formatEuro(calc.salary.total_cost) }}</label>
                             <input id="total_cost" type="number" :class="{ 'd-none': edit.total_cost }"
                                    class="form-control form-control-sm" v-model="calc.salary.total_cost"
                                    @change="update_total_cost" @keyup="update_total_cost"
@@ -213,13 +211,7 @@
                 disponible ici: <a href="https://mon-entreprise.fr/simulateurs/salaire-brut-net" target="_blank"
                                    rel="noopener noreferrer nofollow">mon-entreprise.fr</a>.</p>
         </div><!-- end card body -->
-        <div class="card-footer">
-            <button class="btn btn-outline-success btn-sm float-right" v-if="updateExists" @click="refreshApp">Mise à
-                jour
-            </button>
-            <p class="small"><span class="badge badge-success mr-2">v1.0.0</span> Copyright &copy; Matthias Morin 2026
-            </p>
-        </div><!-- end card footer -->
+        <Footer version="2.0.0" copyrights="Matthias Morin 2026" />
     </div><!-- end card -->
 </template>
 <script>
@@ -230,6 +222,7 @@
     import Salary from '../entities/Salary.js'
     import Hours from '../entities/Hours.js'
     import Calc from '../entities/Calc.js'
+    import Footer from './Footer.vue'
 
     let salary = new Salary()
     let hours = new Hours(35)
@@ -237,6 +230,7 @@
     calc.set_hourly_gross(reference_wages[0].hourly_gross)
     export default {
         name: 'Card',
+        components: { Footer },
         data: function () {
             return {
                 calc: calc,
@@ -256,17 +250,13 @@
                     'hourly_net': true,
                     'total_cost': true
                 },
-                refreshing: false, /* update mecanism */
-                registration: null,
-                updateExists: false
-            }
-        },
-        filters: {
-            format_euro(number) {
-                return Intl.NumberFormat('fr-FR', {style: 'currency', currency: 'EUR'}).format(number)
+                refreshing: false
             }
         },
         methods: {
+            formatEuro(number) {
+                return Intl.NumberFormat('fr-FR', {style: 'currency', currency: 'EUR'}).format(number)
+            },
             toggle(target) {
                 /* set all properties to true (display:none) */
                 for (let property in this.edit) {
@@ -322,35 +312,6 @@
             update_total_cost() {
                 this.calc.set_total_cost(this.calc.salary.total_cost)
             },
-            showRefreshUI(e) {
-                /* Display a button inviting the user to refresh/reload the app due */
-                /* to an app update being available. */
-                /* The new service worker is installed, but not yet active. */
-                /* Store the ServiceWorkerRegistration instance for later use. */
-                this.registration = e.detail;
-                this.updateExists = true;
-            },
-            refreshApp() {
-                /* Handle a user tap on the update app button. */
-                this.updateExists = false;
-                /* Protect against missing registration.waiting. */
-                if (!this.registration || !this.registration.waiting) {
-                    return;
-                }
-                this.registration.waiting.postMessage('skipWaiting');
-            }
-        },
-        created() {
-            /* Listen for swUpdated event and display refresh snackbar as required. */
-            document.addEventListener('swUpdated', this.showRefreshUI, {once: true})
-            /* Refresh all open app tabs when a new service worker is installed. */
-            navigator.serviceWorker.addEventListener('controllerchange', () => {
-                if (this.refreshing) {
-                    return;
-                }
-                this.refreshing = true
-                window.location.reload()
-            })
         }
     }
 </script>
@@ -492,9 +453,6 @@
             }
         }
 
-        .card-footer p {
-            margin-bottom: 0;
-        }
     }
 
     .callout {

@@ -11,15 +11,20 @@ jobs:
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
 
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - uses: actions/setup-node@master
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
 
-    - name: Install App
-      run: make install
+      - name: Install App
+        run: make install
 
-    - name: Run Linter
-      run: make lint
+      - name: Run Linter
+        run: make lint
 
-    - name: Run Unit Tests
-      run: make tests
+      - name: Run Unit Tests
+        run: make tests
