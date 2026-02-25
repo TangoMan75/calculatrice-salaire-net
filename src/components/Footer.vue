@@ -7,11 +7,13 @@
     with this source code in the file LICENSE.
 -->
 <template>
-    <footer class="footer">
+    <footer class="card-footer">
         <p class="small"><span class="badge badge-success mr-2">v{{ version }}</span> Copyright &copy; {{ copyrights }}</p>
     </footer>
 </template>
 <script>
+    // When bumping the app version, update the `version` prop passed
+    // from Card.vue where this component is used.
     export default {
         name: 'Footer',
         props: {
@@ -21,17 +23,7 @@
     }
 </script>
 <style scoped lang="scss">
-    /* necessary to place footer at the bottom of the page */
-    body {
-        position: relative;
-        min-height: 100vh;
-    }
-    footer.footer {
-        width: 100%;
-        position: absolute;
-        min-height: 2rem;
-        @media only screen and (min-width: 576px) {
-            min-height: 4rem;
-        }
+    footer.card-footer p {
+        margin-bottom: 0;
     }
 </style>

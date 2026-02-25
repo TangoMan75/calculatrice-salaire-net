@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/calculatrice-salaire-net/sw.js', { scope: '/calculatrice-salaire-net/' })})}
