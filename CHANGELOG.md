@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+
+## 2026 Update [2.1.0](https://github.com/TangoMan75/calculatrice-salaire-net/releases/tag/2.1.0)
+
+### Added
+
+- Working days count per year (`jours ouvrés`) in the salary card, excluding weekends and French public holidays — including the movable holidays derived from Easter (Lundi de Pâques, Ascension, Lundi de Pentecôte).
+
 ## 2026 Update [2.0.0](https://github.com/TangoMan75/calculatrice-salaire-net/releases/tag/2.0.0)
 ### Added
 - AGENTS.md
@@ -27,4 +35,3 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - `postcss.config.js` and `babel.config.js`.
 
 ## Initial Release [1.0.0](https://github.com/TangoMan75/calculatrice-salaire-net/releases/tag/1.0.0)
-

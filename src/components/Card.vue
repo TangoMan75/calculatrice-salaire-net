@@ -18,6 +18,7 @@
                     décompte de la durée de travail se fait sur la base de <strong>{{ calc.hours.per_year }}
                         heures</strong> pour une année civile. Soit 52 semaines multipliées par {{ calc.hours.per_week
                     }} heures par semaine.</p>
+                <p class="mb-0">Soit <strong>{{ workingDaysPerYear }} jours ouvrés</strong> par an pour l'année {{ new Date().getFullYear() }}.</p>
             </div>
             <div class="row controls px-lg-4 pb-lg-4">
                 <div class="col-sm-6 col-md-6 col-lg-3 mb-md-2 mb-sm-2">
@@ -211,7 +212,7 @@
                 disponible ici: <a href="https://mon-entreprise.fr/simulateurs/salaire-brut-net" target="_blank"
                                    rel="noopener noreferrer nofollow">mon-entreprise.fr</a>.</p>
         </div><!-- end card body -->
-        <Footer version="2.0.0" copyrights="Matthias Morin 2026" />
+        <Footer version="2.1.0" copyrights="Matthias Morin 2026" />
     </div><!-- end card -->
 </template>
 <script>
@@ -312,6 +313,76 @@
             update_total_cost() {
                 this.calc.set_total_cost(this.calc.salary.total_cost)
             },
+        },
+        computed: {
+            workingDaysPerYear() {
+                const now = new Date()
+                const year = now.getFullYear()
+
+                // Calcul de Pâques (algorithme de Meeus/Jones/Butcher)
+                const a = year % 19
+                const b = Math.floor(year / 100)
+                const c = year % 100
+                const d = Math.floor(b / 4)
+                const e = b % 4
+                const f = Math.floor((b + 8) / 25)
+                const g = Math.floor((b - f + 1) / 3)
+                const h = (19 * a + b - d - g + 15) % 30
+                const i = Math.floor(c / 4)
+                const k = c % 4
+                const l = (32 + 2 * e + 2 * i - h - k) % 7
+                const m = Math.floor((a + 11 * h + 22 * l) / 451)
+                const month = Math.floor((h + l - 7 * m + 114) / 31) - 1
+                const day = ((h + l - 7 * m + 114) % 31) + 1
+                const easter = new Date(year, month, day)
+
+                // Jours fériés fixes
+                const fixedHolidays = [
+                    new Date(year, 0, 1),   // Jour de l'an
+                    new Date(year, 4, 1),   // Fête du Travail
+                    new Date(year, 4, 8),   // Victoire 1945
+                    new Date(year, 6, 14),  // Fête nationale
+                    new Date(year, 7, 15),  // Assomption
+                    new Date(year, 10, 1),  // Toussaint
+                    new Date(year, 10, 11), // Armistice
+                    new Date(year, 11, 25)  // Noël
+                ]
+
+                // Jours fériés mobiles (basés sur Pâques)
+                const easterMonday = new Date(easter)
+                easterMonday.setDate(easter.getDate() + 1)
+                const ascension = new Date(easter)
+                ascension.setDate(easter.getDate() + 39)
+                const whitMonday = new Date(easter)
+                whitMonday.setDate(easter.getDate() + 50)
+
+                const mobileHolidays = [easterMonday, ascension, whitMonday]
+
+                const allHolidays = [...fixedHolidays, ...mobileHolidays]
+
+                // Compter les jours ouvrés
+                const start = new Date(year, 0, 1)
+                const end = new Date(year, 11, 31)
+                let count = 0
+                const current = new Date(start)
+
+                while (current <= end) {
+                    const dayOfWeek = current.getDay()
+                    // Vérifier si c'est un jour ouvré (lundi-vendredi)
+                    if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+                        // Vérifier si ce n'est pas un jour férié
+                        const isHoliday = allHolidays.some(h =>
+                            h.getDate() === current.getDate() &&
+                            h.getMonth() === current.getMonth()
+                        )
+                        if (!isHoliday) {
+                            count++
+                        }
+                    }
+                    current.setDate(current.getDate() + 1)
+                }
+                return count
+            }
         }
     }
 </script>

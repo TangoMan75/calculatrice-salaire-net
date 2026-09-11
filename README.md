@@ -18,6 +18,8 @@ La **Calculatrice Salaire Net TangoMan** permet de convertir votre salaire brut 
 
 La **Calculatrice Salaire Net TangoMan** est disponible en mode PWA (Progressive Web App), vous pouvez donc l'installer et l'utiliser hors connection avec une expérience utilisateur proche de celle d'une application native (mobile ou ordinateur de bureau).
 
+Elle affiche également le nombre de jours ouvrés par an, hors week-ends et jours fériés français (y compris les jours fériés mobiles calculés à partir de Pâques).
+
 🚀 Installation
 ---------------
 
@@ -44,10 +46,10 @@ Pour plus d'informations sur le standard du fichier manifest.json : [json.schema
 
 La **Calculatrice Salaire Net TangoMan** utilise :
 
-- [Vue.js 3.4](https://vuejs.org)
+- [Vue.js 3.5](https://vuejs.org)
 - [Bootstrap 4.3.1](https://getbootstrap.com/docs/4.3/getting-started/introduction)
 - [Sass](https://sass-lang.com)
-- [Vite 5](https://vitejs.dev)
+- [Vite 8](https://vitejs.dev)
 - [Vitest](https://vitest.dev)
 - [Chai](https://www.chaijs.com)
 - [vite-plugin-pwa](https://vite-pwa-org.netlify.app)
